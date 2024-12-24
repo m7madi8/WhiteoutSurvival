@@ -1,0 +1,227 @@
+/* style.css */
+body {
+    position: relative;
+    font-family: 'Amiri', serif;
+    background-image: url('bg2.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f0f0f0;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* تأثير ظهور المحتوى */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.title:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: background 0.3s ease;
+    opacity: 0;
+    animation: slideIn 1s forwards 0.5s; /* تأثير الحركة */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.player-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.player-form input, .player-form button {
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-form input:focus, .player-form button:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+}
+
+.player-form button {
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.player-form button:hover {
+    background-color: #ee5a3f;
+    transform: translateY(-3px);
+}
+
+.player-list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.player-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.player-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.player-list li:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player-list button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.player-list button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+/* الاستجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .player-form {
+        width: 100%;
+    }
+
+    .player-list {
+        width: 100%;
+    }
+
+    .player-form input, .player-form button {
+        width: 100%;
+    }
+}
+
+/* الاستجابة للأجهزة المحمولة */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .player-form input, .player-form button {
+        padding: 12px;
+    }
+
+    .player-list li {
+        padding: 12px;
+    }
+}
+
+
+/* إعدادات الخط والتنسيق العام */
+/* إعدادات الخط والتنسيق العام */
+.main-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+}
+
+/* إضافة التأثير على النص */
+.fade-effect {
+    display: inline-block;
+    animation: fadeInOut 5s ease-in-out infinite; /* تأثير الاختفاء والظهور */
+}
+
+/* تأثير الاختفاء والظهور */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* اختفاء النص في البداية */
+    }
+    50% {
+        opacity: 1; /* ظهور النص في منتصف المدة */
+    }
+    100% {
+        opacity: 0; /* اختفاء النص في النهاية */
+    }
+}

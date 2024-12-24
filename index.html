@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Recruited Players</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;700&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Track Recruited Players 1095</h1>
+    </header>
+    <main class="main-content">
+        <h2><span class="fade-effect">Wanted!<i class='bx bx-wink-smile'></i></span></h2>
+        <div class="player-form">
+            <input type="text" id="playerName" placeholder="Player Name" required>
+            <input type="text" id="playerId" placeholder="Player ID" required>
+            <input type="text" id="playerRegion" placeholder="Player State" required>
+            <input type="text" id="playerPower" placeholder="Player Power" required>
+            <input type="text" id="playerHome" placeholder="New Alliance " required>
+            <input type="text" id="heroPower" placeholder="Hero Power" required>
+            <button id="addPlayerButton">Add Player</button>
+        </div>
+        <div class="player-list">
+            <h2>Players List</h2>
+            <ul id="players"></ul>
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
